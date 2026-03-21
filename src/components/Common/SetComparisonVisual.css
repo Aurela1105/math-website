@@ -1,0 +1,130 @@
+.set-comparison-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 16px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.set-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 700px;
+  flex-wrap: wrap;
+}
+
+.set-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.set-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #667eea;
+  text-align: center;
+}
+
+.set-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  min-height: 80px;
+  align-items: center;
+}
+
+.set-item {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: popIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.set-item:nth-child(1) { animation-delay: 0.1s; }
+.set-item:nth-child(2) { animation-delay: 0.2s; }
+.set-item:nth-child(3) { animation-delay: 0.3s; }
+.set-item:nth-child(4) { animation-delay: 0.4s; }
+.set-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.set-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  background: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.comparison-symbol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 100px;
+}
+
+.comparison-icon {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #667eea;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.comparison-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .set-comparison {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .comparison-symbol {
+    transform: rotate(90deg);
+  }
+
+  .set-box {
+    min-width: 100%;
+  }
+}
+

@@ -1,0 +1,120 @@
+
+/* Custom scrollbar track container - wood background for monkey */
+.custom-scrollbar-track {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 100vh;
+  background: 
+    linear-gradient(90deg, 
+      #8B4513 0%, 
+      #A0522D 25%, 
+      #8B4513 50%, 
+      #A0522D 75%, 
+      #8B4513 100%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    );
+  background-size: 100% 100%, 100% 8px;
+  border-left: 2px solid #654321;
+  box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.3);
+  z-index: 9998;
+  pointer-events: none;
+  padding: 20px 0;
+}
+
+.scrollbar-monkey {
+  position: absolute;
+  left: 50%;
+  font-size: 1.4rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  animation: monkeyWalk 0.8s ease-in-out infinite;
+  pointer-events: none;
+  line-height: 1;
+  transform: translateX(-50%);
+  transition: top 0.2s ease-out;
+  z-index: 9999;
+  width: 20px;
+  text-align: center;
+}
+
+@keyframes monkeyWalk {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-3px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0);
+  }
+  75% {
+    transform: translateX(-50%) translateY(3px) rotate(5deg);
+  }
+}
+
+@keyframes monkeyBounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-55%);
+  }
+}
+
+/* Wood grain texture overlay */
+.custom-scrollbar-track::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(101, 67, 33, 0.3) 1px,
+      rgba(101, 67, 33, 0.3) 2px
+    );
+  pointer-events: none;
+}
+
+/* Add wood knots */
+.custom-scrollbar-track::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #654321 0%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 
+    8px 15% 0 0 radial-gradient(circle, #654321 0%, transparent 70%),
+    4px 45% 0 0 radial-gradient(circle, #654321 0%, transparent 70%),
+    6px 70% 0 0 radial-gradient(circle, #654321 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .custom-scrollbar-track {
+    width: 16px;
+  }
+  
+  .custom-scrollbar-thumb {
+    width: 12px;
+  }
+  
+  .scrollbar-monkey {
+    font-size: 1rem;
+  }
+}
+

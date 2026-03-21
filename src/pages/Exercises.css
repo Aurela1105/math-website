@@ -1,0 +1,94 @@
+.exercises-page {
+  min-height: 60vh;
+  padding: 2rem 0;
+}
+
+.back-button {
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background: #4b5563;
+}
+
+.exercise-viewer {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-viewer h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.exercise-question-text {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--bg-color);
+  border-radius: 8px;
+}
+
+.exercise-has-steps {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #10b981;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .exercises-page {
+    padding: 1.5rem 0;
+  }
+
+  .exercise-viewer {
+    padding: 1.5rem;
+  }
+
+  .exercise-viewer h2 {
+    font-size: 1.5rem;
+  }
+
+  .exercise-question-text {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exercises-page {
+    padding: 1rem 0;
+  }
+
+  .back-button {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .exercise-viewer {
+    padding: 1rem;
+  }
+
+  .exercise-viewer h2 {
+    font-size: 1.3rem;
+  }
+
+  .exercise-question-text {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}
+

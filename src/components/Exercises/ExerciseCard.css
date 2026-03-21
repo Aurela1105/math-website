@@ -1,0 +1,97 @@
+.exercise-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: block;
+  cursor: pointer;
+}
+
+.exercise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.exercise-level-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.exercise-points {
+  font-size: 0.9rem;
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.exercise-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.exercise-question {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.exercise-type {
+  font-size: 0.9rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.exercise-has-steps {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #10b981;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .exercise-card {
+    padding: 1.2rem;
+  }
+
+  .exercise-title {
+    font-size: 1.2rem;
+  }
+
+  .exercise-question {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exercise-card {
+    padding: 1rem;
+  }
+
+  .exercise-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .exercise-title {
+    font-size: 1.1rem;
+  }
+
+  .exercise-question {
+    font-size: 0.9rem;
+  }
+}
+

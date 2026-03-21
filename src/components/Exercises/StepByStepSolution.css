@@ -1,0 +1,168 @@
+.step-by-step-solution {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.solution-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.step-item {
+  display: flex;
+  gap: 1.5rem;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.step-item.visible {
+  opacity: 1;
+}
+
+.step-item.active {
+  transform: scale(1.02);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #667eea;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.step-item.active .step-number {
+  background: #10b981;
+  transform: scale(1.1);
+}
+
+.step-content {
+  flex: 1;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.step-item.active .step-content {
+  border-left-color: #10b981;
+  background: #f0fdf4;
+}
+
+.step-description {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.step-calculation {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  color: #667eea;
+  margin: 0.5rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.step-explanation {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.solution-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.control-button {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.control-button:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.control-button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+.full-solution {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+}
+
+.full-solution h4 {
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.full-step {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.full-step:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.full-step strong {
+  color: #667eea;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.full-step .calc {
+  background: white;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  display: inline-block;
+}
+
+.full-step p {
+  margin-top: 0.5rem;
+  color: #6b7280;
+}
+

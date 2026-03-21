@@ -1,0 +1,132 @@
+.position-visual-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 16px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.position-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.box-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #667eea;
+  border-radius: 12px;
+  background: rgba(102, 126, 234, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item-inside {
+  font-size: 3rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.item-on-top {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+.item-outside {
+  font-size: 3rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: move 3s ease-in-out infinite;
+}
+
+@keyframes move {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.position-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #667eea;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inside-label {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.on-top-label {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.outside-label {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .position-visual-container {
+    padding: 1.5rem;
+  }
+
+  .box-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .item-inside,
+  .item-on-top,
+  .item-outside {
+    font-size: 2.5rem;
+  }
+
+  .position-label {
+    font-size: 1rem;
+  }
+}
+

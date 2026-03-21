@@ -1,0 +1,120 @@
+.profile-page {
+  min-height: 60vh;
+  padding: 2rem 0;
+}
+
+.subscription-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.subscription-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.subscription-badge {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.subscription-badge.free {
+  background: linear-gradient(135deg, #6B7280 0%, #9CA3AF 100%);
+  color: white;
+}
+
+.subscription-badge.premium {
+  background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+  color: white;
+}
+
+.subscription-badge.school {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: white;
+}
+
+.subscription-date {
+  color: var(--text-light);
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.upgrade-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #4F46E5 0%, #EC4899 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.upgrade-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1.5rem 0;
+  }
+
+  .subscription-card {
+    padding: 1.5rem;
+  }
+
+  .subscription-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .subscription-badge {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .upgrade-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 1rem 0;
+  }
+
+  .subscription-card {
+    padding: 1.2rem;
+  }
+
+  .subscription-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .subscription-badge {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .subscription-date {
+    font-size: 0.9rem;
+  }
+
+  .upgrade-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+

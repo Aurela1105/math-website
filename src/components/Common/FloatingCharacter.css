@@ -1,0 +1,55 @@
+.floating-character {
+  position: fixed;
+  font-size: 3rem;
+  z-index: 1;
+  pointer-events: none;
+  animation: floatAround 6s ease-in-out infinite;
+  opacity: 0.6;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.floating-character.top-left {
+  top: 10%;
+  left: 5%;
+}
+
+.floating-character.top-right {
+  top: 15%;
+  right: 5%;
+  animation-delay: -2s;
+}
+
+.floating-character.bottom-left {
+  bottom: 10%;
+  left: 5%;
+  animation-delay: -4s;
+}
+
+.floating-character.bottom-right {
+  bottom: 15%;
+  right: 5%;
+  animation-delay: -1s;
+}
+
+@keyframes floatAround {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(20px, -20px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-15px, -30px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-20px, 10px) rotate(3deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-character {
+    font-size: 2rem;
+    opacity: 0.4;
+  }
+}
+

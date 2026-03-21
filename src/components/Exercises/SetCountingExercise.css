@@ -1,0 +1,233 @@
+.set-counting-exercise {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.exercise-title {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.exercise-question {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.set-display {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  margin-bottom: 2rem;
+}
+
+.set-items-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  min-height: 100px;
+  align-items: center;
+}
+
+.set-item-display {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: popIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.set-item-display:nth-child(1) { animation-delay: 0.1s; }
+.set-item-display:nth-child(2) { animation-delay: 0.2s; }
+.set-item-display:nth-child(3) { animation-delay: 0.3s; }
+.set-item-display:nth-child(4) { animation-delay: 0.4s; }
+.set-item-display:nth-child(5) { animation-delay: 0.5s; }
+.set-item-display:nth-child(6) { animation-delay: 0.6s; }
+.set-item-display:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.set-notation {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #667eea;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.answer-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.answer-input {
+  width: 120px;
+  height: 80px;
+  border: 3px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  background: white;
+  color: #1f2937;
+  transition: all 0.3s;
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.answer-input.correct {
+  border-color: #10b981;
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.answer-input.incorrect {
+  border-color: #ef4444;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.answer-input:disabled {
+  cursor: not-allowed;
+}
+
+.exercise-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.check-button,
+.reset-button {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.check-button {
+  background: #667eea;
+  color: white;
+}
+
+.check-button:hover:not(:disabled) {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.check-button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.reset-button {
+  background: #f59e0b;
+  color: white;
+}
+
+.reset-button:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(245, 158, 11, 0.3);
+}
+
+.results-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.result-message {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+  max-width: 600px;
+  justify-content: center;
+  text-align: center;
+}
+
+.result-message.correct {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 2px solid #10b981;
+}
+
+.result-message.incorrect {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 2px solid #ef4444;
+}
+
+.result-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .set-counting-exercise {
+    padding: 1.5rem;
+  }
+
+  .set-items-display {
+    gap: 0.75rem;
+  }
+
+  .set-item-display {
+    font-size: 2.5rem;
+    padding: 0.75rem;
+  }
+
+  .result-message {
+    flex-direction: column;
+  }
+}
+

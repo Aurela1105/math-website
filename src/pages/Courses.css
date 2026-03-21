@@ -1,0 +1,401 @@
+.courses-page {
+  min-height: 60vh;
+  padding: 2rem 0;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  text-align: center;
+  animation: slideInDown 0.8s ease-out;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+.grade-filter-section {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grade-filter-section label {
+  font-weight: 600;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.grade-filter-select {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 200px;
+  font-weight: 500;
+}
+
+.grade-filter-select:hover {
+  border-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.grade-filter-select:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.filter-section {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-section label {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.filter-select {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  font-size: 1rem;
+  background: var(--card-bg);
+  cursor: pointer;
+  transition: border-color 0.3s;
+  min-width: 250px;
+  color: var(--text-color);
+}
+
+.filter-select:hover {
+  border-color: #667eea;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.level-info-banner {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.level-badge-large {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.level-details {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.level-details p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.level-details strong {
+  color: var(--text-color);
+  margin-right: 0.5rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.no-results {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  grid-column: 1 / -1;
+  padding: 3rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+}
+
+/* Grades Section */
+.grades-section {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.grades-section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+  background: linear-gradient(135deg, #4F46E5 0%, #EC4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Grade Groups */
+.grade-group {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+.grade-group:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.grade-group-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  font-weight: 700;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+  border-radius: 15px;
+  border: 2px solid #BAE6FD;
+  display: inline-block;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.grade1-chapters-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.grade1-subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 1rem;
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  border-radius: 12px;
+  border: 2px solid #FCD34D;
+}
+
+.grades-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grade-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #E5E7EB;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: scaleIn 0.5s ease-out both;
+}
+
+.grade-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: #4F46E5;
+}
+
+.grade-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #4F46E5;
+}
+
+.grade-title {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin: 0;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4F46E5 0%, #EC4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grade-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.topic-section {
+  background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border-left: 4px solid #4F46E5;
+}
+
+.topic-title {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.subtopics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subtopic-item {
+  color: #4B5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.subtopic-item::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #4F46E5;
+  font-weight: bold;
+}
+
+/* Section Divider */
+.existing-courses-section {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 3px solid #E5E7EB;
+}
+
+.section-divider-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .grade-filter-section {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .grade-filter-section label {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .grade-filter-select {
+    width: 100%;
+    min-width: unset;
+  }
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .grades-section-title {
+    font-size: 1.5rem;
+  }
+
+  .grade-group {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .grade-group-title {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .grade1-subtitle {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
+
+  .grade1-chapters-container {
+    max-width: 100%;
+  }
+
+  .grades-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .grade-card {
+    padding: 1.5rem;
+  }
+
+  .grade-title {
+    font-size: 1.5rem;
+  }
+
+  .topic-title {
+    font-size: 1.1rem;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  .level-info-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .level-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

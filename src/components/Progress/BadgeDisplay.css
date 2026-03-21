@@ -1,0 +1,126 @@
+.badge-display {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.badge-display h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.badge-item.earned {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.badge-item.locked {
+  background: #f9fafb;
+  opacity: 0.6;
+}
+
+.badge-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.badge-info {
+  flex: 1;
+}
+
+.badge-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.badge-info p {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.badge-requirement {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.badge-item.earned .badge-requirement {
+  background: #667eea;
+  color: white;
+}
+
+.badge-check {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.progress-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e5e7eb;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-color);
+  border-radius: 8px;
+}
+
+.stat-label {
+  display: block;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #667eea;
+}
+

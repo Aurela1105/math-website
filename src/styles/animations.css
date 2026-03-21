@@ -1,0 +1,135 @@
+/* Global Animations for all pages */
+
+/* Slide In Down Animation */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.1); 
+  }
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(10deg); 
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply animations to common elements */
+.page-title {
+  animation: slideInDown 0.8s ease-out;
+}
+
+.page-subtitle {
+  animation: fadeIn 1s ease-out 0.2s both;
+}
+
+/* Card animations */
+.exercise-card,
+.game-card,
+.test-card,
+.result-card,
+.worksheet-card {
+  animation: scaleIn 0.5s ease-out both;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exercise-card:hover,
+.game-card:hover,
+.test-card:hover,
+.result-card:hover,
+.worksheet-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Stagger animations for grids */
+.exercises-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.exercises-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.exercises-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.exercises-grid > *:nth-child(4) { animation-delay: 0.4s; }
+.exercises-grid > *:nth-child(5) { animation-delay: 0.5s; }
+.exercises-grid > *:nth-child(6) { animation-delay: 0.6s; }
+
+.games-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.games-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.games-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.games-grid > *:nth-child(4) { animation-delay: 0.4s; }
+
+.tests-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.tests-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.tests-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.tests-grid > *:nth-child(4) { animation-delay: 0.4s; }
+
+/* Card hover animations */
+.animated-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon pulse animation */
+.animated-icon {
+  animation: pulse 2s infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Section fade in */
+.animated-section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Stagger animation for lists */
+.animated-list-item {
+  animation: scaleIn 0.5s ease-out both;
+}
+
+.animated-list-item:nth-child(1) { animation-delay: 0.1s; }
+.animated-list-item:nth-child(2) { animation-delay: 0.2s; }
+.animated-list-item:nth-child(3) { animation-delay: 0.3s; }
+.animated-list-item:nth-child(4) { animation-delay: 0.4s; }
+.animated-list-item:nth-child(5) { animation-delay: 0.5s; }
+.animated-list-item:nth-child(6) { animation-delay: 0.6s; }
+
