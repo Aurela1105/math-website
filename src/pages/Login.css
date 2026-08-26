@@ -1,9 +1,15 @@
 .login-page {
-  min-height: 80vh;
-  padding: 3rem 0;
+  min-height: calc(100vh - 180px);
+  padding: clamp(2rem, 6vh, 4rem) 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.login-page .container {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .login-container {

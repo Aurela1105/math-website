@@ -24,9 +24,10 @@ export default function SearchBar() {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsOpen(true)}
           placeholder="Kërko kurse, ushtrime, topike..."
+          aria-label="Kërko në MathZone"
           className="search-input"
         />
-        <button type="submit" className="search-button">
+        <button type="submit" className="search-button" aria-label="Kërko">
           🔍
         </button>
       </form>

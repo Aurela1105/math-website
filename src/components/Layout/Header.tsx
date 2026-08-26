@@ -31,7 +31,9 @@ export default function Header() {
           <button 
             className="mobile-menu-toggle"
             onClick={toggleMobileMenu}
-            aria-label="Toggle menu"
+            aria-label={isMobileMenuOpen ? 'Mbyll menunë' : 'Hap menunë'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="site-navigation"
           >
             {isMobileMenuOpen ? '✕' : '☰'}
           </button>
@@ -40,7 +42,7 @@ export default function Header() {
           <div className="header-search">
             <SearchBar />
           </div>
-          <nav className="nav">
+          <nav className="nav" id="site-navigation" aria-label="Navigimi kryesor">
             <Link to="/" className={isActive('/') ? 'active' : ''} onClick={() => setIsMobileMenuOpen(false)}>
               Faqja Kryesore
             </Link>

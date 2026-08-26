@@ -36,7 +36,8 @@ export default function SoundHandler() {
         return; // Skip if too soon since last hover sound
       }
 
-      const target = e.target as HTMLElement;
+      const target = e.target instanceof Element ? e.target : null;
+      if (!target) return;
       const isInteractive = 
         target.tagName === 'BUTTON' ||
         target.tagName === 'A' ||

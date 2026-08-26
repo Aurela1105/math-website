@@ -5,7 +5,7 @@
 }
 
 .footer {
-  background-color: #1f2937;
+  background-color: #17243a;
   color: white;
   padding: 3rem 0 1rem;
 }
@@ -20,7 +20,7 @@
 .footer-section h3,
 .footer-section h4 {
   margin-bottom: 1rem;
-  color: #fbbf24;
+  color: #f7c95c;
 }
 
 .footer-section ul {
@@ -36,6 +36,11 @@
   color: #d1d5db;
   text-decoration: none;
   transition: color 0.3s;
+}
+
+.footer-section a:focus-visible,
+.footer-section a:hover {
+  color: #ffffff;
 }
 
 .footer-section a:hover {
