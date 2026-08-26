@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Layout from './components/Layout/Layout';
 import VisitTracker from './components/Analytics/VisitTracker';
 import SoundHandler from './components/Common/SoundHandler';
+
 import Home from './pages/Home';
 import Courses from './pages/Courses';
 import CourseDetail from './pages/CourseDetail';
@@ -16,9 +18,10 @@ import Login from './pages/Login';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/math-website">
       <VisitTracker />
       <SoundHandler />
+
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -39,4 +42,3 @@ function App() {
 }
 
 export default App;
-
