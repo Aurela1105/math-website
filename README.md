@@ -1,1 +1,1 @@
-https://aurela1105.github.io/lojera
+https://aurela1105.github.io/math-website/
